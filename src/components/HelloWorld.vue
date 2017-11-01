@@ -29,11 +29,11 @@ export default {
 <style scoped>
   .main{
     height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   .content{
     height: 100%;
-    margin-top: -48px;
-    padding-top: 48px;
     display: flex;
   }
   .right-con{

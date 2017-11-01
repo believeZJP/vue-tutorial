@@ -58,6 +58,7 @@ export default {
     background-color: #F2F3F8;
     text-align: left;
     overflow-y: auto;
+    border-right: solid 1px #e6e6e6;
   }
  
 </style>
