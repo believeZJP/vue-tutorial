@@ -12,11 +12,11 @@
 
 <script>
   export default {
-    name: 'Headbar',
-    methods: {
-      logout () {
+      name: 'Headbar',
+      methods: {
+          logout () {
+          }
       }
-    }
   }
 </script>
 

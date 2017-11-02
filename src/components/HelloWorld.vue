@@ -17,11 +17,11 @@ import Headbar from './Headbar'
 import Sidebar from './Sidebar'
 
 export default {
-  name: 'hello',
-  components: {
-    Headbar,
-    Sidebar
-  }
+    name: 'hello',
+    components: {
+        Headbar,
+        Sidebar
+    }
 }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <el-menu default-active="2" class="el-menu-vertical-demo" :router='true' theme="light">
+    <el-menu default-active="2" class="el-menu-vertical-demo" :router='true'>
       <el-submenu index="1">
         <template slot="title">导航一</template>
         <el-menu-item-group title="分组一">
@@ -32,21 +32,24 @@
       <el-menu-item index="/user">
         User
       </el-menu-item>
+      <el-menu-item index="/userTable">
+        UserTable
+      </el-menu-item>
     </el-menu>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Sidebar',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  },
-  methods: {
+    name: 'Sidebar',
+    data () {
+        return {
+            msg: 'Welcome to Your Vue.js App'
+        }
+    },
+    methods: {
 
-  }
+    }
 }
 </script>
 

@@ -37,36 +37,36 @@
 
 <script>
   export default {
-    methods: {
-      tableRowClassName (row, index) {
-        if (index === 1) {
-          return 'info-row'
-        } else if (index === 3) {
-          return 'positive-row'
-        }
-        return ''
+      methods: {
+          tableRowClassName (row, index) {
+              if (index === 1) {
+                  return 'info-row'
+              } else if (index === 3) {
+                  return 'positive-row'
+              }
+              return ''
+          }
+      },
+      data () {
+          return {
+              tableData2: [{
+                  date: '2016-05-02',
+                  name: '王小虎',
+                  address: '上海市普陀区金沙江路 1518 弄'
+              }, {
+                  date: '2016-05-04',
+                  name: '王小虎',
+                  address: '上海市普陀区金沙江路 1518 弄'
+              }, {
+                  date: '2016-05-01',
+                  name: '王小虎',
+                  address: '上海市普陀区金沙江路 1518 弄'
+              }, {
+                  date: '2016-05-03',
+                  name: '王小虎',
+                  address: '上海市普陀区金沙江路 1518 弄'
+              }]
+          }
       }
-    },
-    data () {
-      return {
-        tableData2: [{
-          date: '2016-05-02',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-04',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-01',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-03',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }]
-      }
-    }
   }
 </script>

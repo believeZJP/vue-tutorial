@@ -11,26 +11,22 @@
   </el-form>
 </template>
 <script>
-  
-
   export default {
-    data () {
-      return {
-        userInfo: {
-          account: '',
-          password: ''
-        }
-      }
-    },
-    methods: {
-      onSubmit () {
-        
+      data () {
+          return {
+              userInfo: {
+                  account: '',
+                  password: ''
+              }
+          }
       },
-      jumpToHome () {
-        router.push('/productList')
-      }
+      methods: {
+          onSubmit () {
+          },
+          jumpToHome () {
+          }
 
-    }
+      }
   }
 </script>
 
