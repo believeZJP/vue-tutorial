@@ -2,10 +2,6 @@ html, body{
     height: 100%;
 }
 
-.el-menu{
-    border:none;
-    background-color: transparent;
-}
 /* scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -50,6 +46,12 @@ $pxObj: (10p: 10px, 20p: 20px, 30p: 30px, 40p: 40px);
   }
 }
 
+$lrObj: (l: left, r: right);
+@each $n , $v in $lrObj {
+    .f#{$n}{
+        float: $v;
+    }
+}
 
 // 右侧页面总区域
 .page-con-r{
