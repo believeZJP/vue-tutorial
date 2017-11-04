@@ -38,6 +38,7 @@ export default {
   }
   .right-con{
     height: 100%;
+    overflow: auto;
     flex: 1;
   }
   .fade-enter-active,

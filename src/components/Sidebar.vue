@@ -35,6 +35,9 @@
       <el-menu-item index="/userTable">
         UserTable
       </el-menu-item>
+      <el-menu-item index="/zhihu">
+        知乎日报
+      </el-menu-item>
     </el-menu>
   </div>
 </template>

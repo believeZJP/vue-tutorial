@@ -18,7 +18,7 @@ html, body{
 }
 
 // 一些通用的间距设置
-$pxObj: (10p: 10px, 20p: 20px, 30p: 30px, 40p: 40px);
+$pxObj: (5p: 5px, 10p: 10px, 15p: 15px, 20p: 20px, 25p: 25px, 30p: 30px, 35p: 35px, 40p: 40px);
 @each $header, $size in $pxObj {
   .mt#{$header} {
     margin-top: $size;
@@ -44,6 +44,12 @@ $pxObj: (10p: 10px, 20p: 20px, 30p: 30px, 40p: 40px);
   .pr#{$header} {
     padding-right: $size;
   }
+  .m#{$header} {
+    margin: $size;
+  }
+  .p#{$header} {
+    padding: $size;
+  }
 }
 
 $lrObj: (l: left, r: right);
@@ -52,6 +58,23 @@ $lrObj: (l: left, r: right);
         float: $v;
     }
 }
+
+.ellipsis{
+  white-space:nowrap;
+  word-break:keep-all;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both
+}
+
 
 // 右侧页面总区域
 .page-con-r{
