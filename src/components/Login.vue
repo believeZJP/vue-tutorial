@@ -6,28 +6,34 @@
     <el-form-item label="密码">
       <el-input type="password" v-model="userInfo.password" placeholder=""></el-input>
     </el-form-item><el-form-item>
-      <el-button type="primary" @click="onSubmit">登录</el-button>
+      <el-button type="primary" @click="login">登录</el-button>
     </el-form-item>
   </el-form>
 </template>
 <script>
-  export default {
-      data () {
-          return {
-              userInfo: {
-                  account: '',
-                  password: ''
-              }
-          }
-      },
-      methods: {
-          onSubmit () {
-          },
-          jumpToHome () {
-          }
+import fetch from '@/utils/AFetch'
+export default {
+    data () {
+        return {
+            userInfo: {
+                account: '',
+                password: ''
+            }
+        }
+    },
+    methods: {
+        login () {
+            fetch('login', this.userInfo).then(res => {
+                console.log(res)
+            }).catch(err => {
+                console.log(err)
+            })
+        },
+        jumpToHome () {
+        }
 
-      }
-  }
+    }
+}
 </script>
 
 <style scoped>
