@@ -18,6 +18,7 @@ export default new Router({
         {
             path: '/',
             name: 'Hello',
+            redirect: '/zhihu',
             component: HelloWorld,
             children: [
                 {path: '/hello2', name: 'Hello2', component: Hello2},

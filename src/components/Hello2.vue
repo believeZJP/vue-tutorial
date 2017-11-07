@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import mockFetch from '@/utils/mockFetch'
 
 export default {
     name: 'hello2',
@@ -13,6 +14,14 @@ export default {
         return {
             msg: 'Welcome to Your Vue.js App'
         }
+    },
+    created () {
+        // mockFetch('http://mock.com/mock/data').then(res => {
+        mockFetch('/mock/data').then(res => {
+            console.log(res)
+        }).catch(err => {
+            console.log(err)
+        })
     }
 }
 </script>

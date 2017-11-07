@@ -3,12 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import mock from './mock'
+
 import 'normalize.css'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/style/element-cover.scss'
 import '@/style/index.scss'
 
+Vue.use(mock)
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 

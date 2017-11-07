@@ -6,8 +6,17 @@
 </template>
 
 <script>
+import Cookie from 'js-cookie'
+import router from '@/router'
 export default {
-    name: 'app'
+    name: 'app',
+    created () {
+        if (!Cookie.get('token')) {
+            router.push('/login')
+        } else {
+            router.push('/')
+        }
+    }
 }
 </script>
 

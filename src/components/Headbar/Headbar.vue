@@ -11,13 +11,19 @@
 </template>
 
 <script>
-  export default {
-      name: 'Headbar',
-      methods: {
-          logout () {
-          }
-      }
-  }
+import Cookie from 'js-cookie'
+export default {
+    name: 'Headbar',
+    methods: {
+        logout () {
+            let keys = Cookie.get()
+            for (let k in keys) {
+                Cookie.remove(k)
+            }
+            location.reload()
+        }
+    }
+}
 </script>
 
 <style lang='scss' scoped>
