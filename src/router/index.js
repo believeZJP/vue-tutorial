@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Hello2 from '@/components/Hello2'
 import User from '@/components/User'
 import Login from '@/components/Login'
+import Count from '@/components/Count'
 // const _import = require('./_import_' + process.env.NODE_ENV)
 // const UserTable = _import('UserTable')
 import UserTable from '@/views/UserTable'
@@ -24,6 +25,7 @@ export default new Router({
                 {path: '/hello2', name: 'Hello2', component: Hello2},
                 {path: '/user', name: 'User', component: User},
                 {path: '/userTable', name: 'UserTable', component: UserTable},
+                {path: '/count', name: 'count', component: Count},
                 {path: '/zhihu', name: 'ZhihuView', component: ZhihuView}
             ]
         },

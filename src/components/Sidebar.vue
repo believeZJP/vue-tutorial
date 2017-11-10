@@ -29,6 +29,9 @@
           Hello2
         </router-link>-->
       </el-menu-item>
+      <el-menu-item index="/count">
+        Count
+      </el-menu-item>
       <el-menu-item index="/user">
         User
       </el-menu-item>
