@@ -16,9 +16,22 @@ const mutations = {
     }
 }
 
+const actions = {
+    addAction (context) {
+        setTimeout(() => {
+            context.commit('reduce')
+            console.log('我是异步执行的')
+        }, 500)
+        context.commit('add', 10)
+        console.log('我先执行')
+    },
+    reduceAction ({commit}) {
+        commit('reduce')
+    }
+}
 const getters = {
     count: function (state) {
-        state.count += 100
+        // state.count += 100
         return state.count
     }
 }
@@ -26,5 +39,6 @@ const getters = {
 export default new Vuex.Store({
     state,
     mutations,
+    actions,
     getters
 })

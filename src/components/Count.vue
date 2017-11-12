@@ -6,12 +6,14 @@
       <h3>{{count}}</h3>
       <button @click="add(10)"> 加分 </button>
       <button @click="reduce"> 减分 </button>
+      <button @click="addAction(10)"> 异步加分 </button>
+      <button @click="reduceAction"> 异步减分 </button>
   </div>
 </template>
 
 <script>
     import store from '@/store'
-    import { mapState, mapMutations, mapGetters } from 'vuex'
+    import { mapState, mapMutations, mapGetters, mapActions } from 'vuex'
     export default{
         data () {
             return {
@@ -28,13 +30,16 @@
         }), */
         // computed: mapState(['count']),
         computed: {
-            ...mapState(['count']),
             /* count () {
                 return this.$store.getters.count
             } */
+            ...mapState(['count']),
             ...mapGetters(['count'])
         },
-        methods: mapMutations(['add', 'reduce']),
+        methods: {
+            ...mapActions(['addAction', 'reduceAction']),
+            ...mapMutations(['add', 'reduce'])
+        },
         store
     }
 </script>
