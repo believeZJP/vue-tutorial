@@ -36,9 +36,19 @@ const getters = {
     }
 }
 
-export default new Vuex.Store({
+const moduleA = {
+    state, mutations, getters, actions
+}
+
+/* export default new Vuex.Store({
     state,
     mutations,
     actions,
     getters
+}) */
+
+export default new Vuex.Store({
+    modules: {
+        a: moduleA
+    }
 })

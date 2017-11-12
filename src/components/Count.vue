@@ -13,7 +13,8 @@
 
 <script>
     import store from '@/store'
-    import { mapState, mapMutations, mapGetters, mapActions } from 'vuex'
+    // import { mapState, mapMutations, mapGetters, mapActions } from 'vuex'
+    import { mapMutations, mapActions } from 'vuex'
     export default{
         data () {
             return {
@@ -33,8 +34,11 @@
             /* count () {
                 return this.$store.getters.count
             } */
-            ...mapState(['count']),
-            ...mapGetters(['count'])
+            // ...mapState(['count']),
+            // ...mapGetters(['count']),
+            count () {
+                return this.$store.state.a.count
+            }
         },
         methods: {
             ...mapActions(['addAction', 'reduceAction']),
