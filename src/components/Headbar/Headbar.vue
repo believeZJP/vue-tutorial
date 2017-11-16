@@ -20,7 +20,8 @@ export default {
             for (let k in keys) {
                 Cookie.remove(k)
             }
-            location.reload()
+            // location.reload()
+            this.$router.push('/login')
         }
     }
 }

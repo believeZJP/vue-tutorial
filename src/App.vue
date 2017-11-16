@@ -14,7 +14,7 @@ export default {
         if (!Cookie.get('token')) {
             router.push('/login')
         } else {
-            router.push('/')
+            // router.push('/')
         }
     }
 }
